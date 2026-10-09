@@ -1,0 +1,18 @@
+configfile: "config/config.yaml"
+
+# Load Rules
+include: "rules/common.smk"
+include: "rules/trim.smk"
+include: "rules/align.smk"
+include: "rules/dedup.smk"
+include: "rules/filter.smk"
+include: "rules/bigwig.smk"
+include: "rules/peaks.smk"
+include: "rules/qc.smk"
+include: "rules/mspc.smk"
+include: "rules/heatmap.smk"
+include: "rules/diffbind.smk"
+
+rule all:
+    input:
+        get_final_output

@@ -1,0 +1,62 @@
+#Paths
+tmp_dir: /hpc/local/Rocky8/prekovic/theo/temporary/
+fastq_dir: /hpc/local/Rocky8/prekovic/KvM/fastq
+output_dir: /hpc/local/Rocky8/prekovic/KvM/results
+#ref_genome: /hpc/local/Rocky8/prekovic/common_files/gencode_releaseM37_GRCm39/GRCm39.primary_assembly.genome.fa
+bowtie2_index: "/hpc/local/Rocky8/prekovic/common_files/gencode_release48/GRCh38.primary_assembly_bowtie2_index"
+samples: /hpc/local/Rocky8/prekovic/KvM/samples_KvM.tsv
+
+# Path to your gene annotation (GTF/GFF)
+ref_gtf: "/hpc/local/Rocky8/prekovic/common_files/gencode_release48/gencode.v48.basic.annotation.gtf"
+
+# blacklist region hg38
+blacklist_bed: "/hpc/local/Rocky8/prekovic/common_files/gencode_release48/hg38-blacklist.v2_Boyle_Lab.bed"
+
+# bamcoverage settings
+effective_genome_size: 2913022398 #GRCh38
+bigwig_ignore_for_normalization: ["chrY", "chrX"]
+
+# # tornado plot settings
+# heatmap_comparisons:
+#   # QC View: Shows every replicate side-by-side
+#   global_qc:
+#     conditions: ["RAD21_pos", "RAD21_neg"] 
+#     k: 4
+#     plot_type: "merged"
+  
+#   # Publication View: Shows one clean column per condition
+#   global_clean:
+#     conditions: ["SA1_pos", "SA1_neg"]
+#     k: 4
+#     plot_type: "merged"
+
+#   # Publication View: Shows one clean column per condition
+#   global_clean:
+#     conditions: ["SA2_pos", "SA2_neg"]
+#     k: 4
+#     plot_type: "merged"
+
+#   # Publication View: Shows one clean column per condition
+#   global_clean:
+#     conditions: ["wt_pos", "wt_neg"]
+#     k: 4
+#     plot_type: "merged"
+
+# diffbind
+# diffbind_contrasts:
+#   BT_SOX11i_vs_BT_DMSO:
+#     column: "condition"
+#     target: "BT_SOX11i"
+#     reference: "BT_DMSO"
+#   H660_SOX11i_vs_H660_DMSO:
+#     column: "condition"
+#     target: "H660_SOX11i"
+#     reference: "H660_DMSO"
+#   H82_SOX11i_vs_H82_DMSO:
+#     column: "condition"
+#     target: "H82_SOX11i"
+#     reference: "H82_DMSO"
+#   SH_SOX11i_vs_SH_DMSO:
+#     column: "condition"
+#     target: "SH_SOX11i"
+#     reference: "SH_DMSO"
